@@ -119,6 +119,21 @@ img {
   color: var(--title-color);
 }
 
+.navigation-list-item {
+  position: relative;
+}
+.current::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+}
+
 .navigation-list .navigation-list-link.current {
   color: var(--accent-color);
 }

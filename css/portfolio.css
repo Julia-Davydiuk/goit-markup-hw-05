@@ -146,6 +146,21 @@ img {
 .address-mail-link:hover svg {
   fill: var(--accent-color);
 }
+.navigation-list-item {
+  position: relative;
+}
+.current::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+}
+
 /*===========END HEADER===========*/
 
 /*===========BUTTON===========*/
@@ -203,6 +218,7 @@ img {
 
 .projects-list-link {
   width: 370px;
+  position: relative;
 }
 
 .projects-list-item {
@@ -236,6 +252,34 @@ img {
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--description-color);
+}
+
+.prodjects-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 370px;
+  height: 294px;
+  background: rgba(33, 150, 243, 0.9);
+  padding: 64px 24px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.projects-overlay-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.555;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+}
+
+.projects-list-item:hover .prodjects-overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 /*===========END ALL PROJECTS===========*/
 
