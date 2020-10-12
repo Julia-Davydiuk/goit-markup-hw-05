@@ -266,8 +266,9 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .projects-overlay-title {
   font-weight: 400;
   font-size: 18px;
@@ -280,7 +281,9 @@ img {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  transform: translateY(-5px);
 }
+
 /*===========END ALL PROJECTS===========*/
 
 /*===========FOOTER===========*/
