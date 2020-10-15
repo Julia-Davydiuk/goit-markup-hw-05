@@ -18,7 +18,7 @@
   padding: 0;
 }
 
-body {
+.body {
   font-family: var(--main-font);
 }
 
@@ -181,9 +181,11 @@ img {
 .icon-mail,
 .icon-tel {
   margin-right: 10px;
+  fill: var(--description-color);
 }
 
-.address-mail-link:hover svg {
+.address-mail-link:hover svg,
+.address-tel-link:hover svg {
   fill: var(--accent-color);
 }
 /*===========END HEADER===========*/
@@ -274,7 +276,7 @@ img {
   color: var(--description-color);
 }
 
-/* .advantages-list-item::before {
+.advantages-list-item::before {
   display: block;
   content: "";
   height: 120px;
@@ -299,8 +301,8 @@ img {
 
 .icone-astronaut-4::before {
   background-image: url(../image/advantages/astronaut-4.svg);
-} */
-/* .advantages-icon {
+}
+.advantages-icon {
   display: flex;
   background-color: var(--bacground-team);
 }
@@ -310,7 +312,7 @@ img {
 
 .advantages-icon-item:not(:last-child) {
   padding-right: 30px;
-} */
+}
 .advantages-icon {
   display: inline-flex;
   width: 255px;
@@ -425,13 +427,12 @@ img {
 }
 
 .team-social-list_item-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .team-social-list_item:not(:last-child) {
@@ -439,17 +440,15 @@ img {
 }
 
 .team-social-list_item-link svg {
-  fill: #afb1b8;
   width: 20px;
   height: 20px;
+  fill: #afb1b8;
 }
 
+.team-social-list_item-link:hover svg,
 .team-social-list_item-link:hover {
-  fill: var(--accent-color);
-}
-
-.team-social-list_item-link:hover svg {
   fill: var(--secondary-color);
+  background: var(--accent-color);
 }
 /*===========END TEAM===========*/
 
@@ -467,15 +466,16 @@ img {
 .client-list-item {
   width: 170px;
   height: 90px;
-  border: 1px solid #afb1b8;
-  box-sizing: border-box;
-  border-radius: 4px;
 }
 
 .client-list-item-link {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
 .client-list-item-link svg {
@@ -483,9 +483,12 @@ img {
   width: 90px;
   height: 53px;
 }
-
-.client-list_item-link:hover {
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1!!!!!! */
+.client-list-item-link:hover svg {
   fill: var(--accent-color);
+}
+.client-list-item-link:hover {
+  border: 1px solid var(--accent-color);
 }
 /*===========END CLIENTS===========*/
 
@@ -582,29 +585,24 @@ img {
   margin: 0 auto;
 }
 
-.social-list_item .social-list_item-link {
-  display: block;
+.social-list_item-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.social-list_item:not(:last-child) {
-  margin-right: 10px;
 }
 
 .social-list_item-link svg {
-  fill: #ffffff;
   width: 20px;
   height: 20px;
+  fill: #ffffff;
 }
 
-.team-social-list_item-link:hover {
-  fill: var(--accent-color);
+.social-list_item-link:hover {
+  background: var(--accent-color);
 }
 
 /* ===========END FOOTER===========*/
